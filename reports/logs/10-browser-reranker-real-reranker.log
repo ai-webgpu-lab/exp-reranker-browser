@@ -1,0 +1,114 @@
+repo=exp-reranker-browser
+scenario=Browser Reranker / Real Reranker
+url_search=?mode=real-reranker
+captured_at=2026-05-20T15:45:46.857Z
+browser=Chromium 147.0.7727.15
+headless=true
+meta_scenario=browser-reranker-readiness
+status=success
+
+[page-console]
+(none)
+
+[harness-logs]
+./reports/logs/10-browser-reranker-real-reranker.log
+
+[result-json]
+{
+  "meta": {
+    "repo": "exp-reranker-browser",
+    "commit": "194dc02",
+    "timestamp": "2026-05-20T15:45:46.751Z",
+    "owner": "ai-webgpu-lab",
+    "track": "ml",
+    "scenario": "browser-reranker-readiness",
+    "notes": "candidateCount=6; queryTokens=15; bestRelevantRank=1; backend=webgpu; realAdapter=fallback(adapter.loadModel is not a function); automation=playwright-chromium",
+    "capture_context": {
+      "tool": "playwright-chromium",
+      "browser_name": "Chromium",
+      "browser_version": "147.0.7727.15",
+      "headless": true,
+      "captured_at": "2026-05-20T15:45:46.857Z",
+      "captured_by": "codex"
+    },
+    "capture_scenario_id": "10-browser-reranker-real-reranker",
+    "capture_url_search": "?mode=real-reranker"
+  },
+  "environment": {
+    "browser": {
+      "name": "Chrome",
+      "version": "147.0.7727.15"
+    },
+    "os": {
+      "name": "Linux",
+      "version": "unknown"
+    },
+    "device": {
+      "name": "Linux x86_64",
+      "class": "desktop-high",
+      "cpu": "16 threads",
+      "memory_gb": 32,
+      "power_mode": "unknown"
+    },
+    "gpu": {
+      "adapter": "navigator.gpu available",
+      "required_features": [
+        "shader-f16"
+      ],
+      "limits": {}
+    },
+    "backend": "webgpu",
+    "fallback_triggered": false,
+    "worker_mode": "main",
+    "cache_state": "warm"
+  },
+  "workload": {
+    "kind": "reranker",
+    "name": "browser-reranker-readiness",
+    "input_profile": "6-candidates-15-query-tokens",
+    "model_id": "browser-reranker-fixture-v1",
+    "dataset": "reranker-fixture-v1"
+  },
+  "metrics": {
+    "common": {
+      "time_to_interactive_ms": 883.2,
+      "init_ms": 18.4,
+      "success_rate": 1,
+      "peak_memory_note": "32 GB reported by browser",
+      "error_type": ""
+    },
+    "embeddings": {
+      "docs_per_sec": 326.09,
+      "queries_per_sec": 54.35,
+      "p50_ms": 0,
+      "p95_ms": 0.1,
+      "recall_at_10": 1,
+      "index_build_ms": 18.4
+    }
+  },
+  "status": "success",
+  "artifacts": {
+    "raw_logs": [
+      "./reports/logs/10-browser-reranker-real-reranker.log"
+    ],
+    "deploy_url": "https://ai-webgpu-lab.github.io/exp-reranker-browser/",
+    "runtime_adapter": {
+      "id": "reranker-xenova-bge-reranker-base-300",
+      "label": "Reranker Xenova/bge-reranker-base (Transformers.js 3.0.0)",
+      "status": "connected",
+      "isReal": true,
+      "version": "3.0.0",
+      "capabilities": [
+        "prefill",
+        "decode",
+        "rerank",
+        "fixed-output-budget"
+      ],
+      "loadType": "async",
+      "message": "Real runtime adapter 'reranker-xenova-bge-reranker-base-300' is connected."
+    },
+    "screenshots": [
+      "./reports/screenshots/10-browser-reranker-real-reranker.png"
+    ]
+  }
+}
